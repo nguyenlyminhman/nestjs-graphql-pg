@@ -7,7 +7,7 @@ export class EmployeeResolver {
 
     constructor(private employeeService: EmployeeService) { }
 
-    @Query(() => Employee)
+    @Query(() => [Employee], { name: "getAllEmployee" })
     findAll() {
         return this.employeeService.findAll();
     }
